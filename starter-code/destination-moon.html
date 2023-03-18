@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Destination Moon</title>
+  </head>
+  <body class="destination">
+    <nav>
+      <div class="logo">
+        <img src="./assets/shared/logo.svg" alt="" />
+      </div>
+      <div class="line"></div>
+      <ul class="navbar">
+        <li class="menuItem">
+          <a class="menuLink" href="./index.html">
+            <span class="number">00</span>
+            Home
+          </a>
+        </li>
+        <li class="menuItem">
+          <a class="menuLink active" href="">
+            <span class="number">01</span> Destination
+          </a>
+        </li>
+
+        <li class="menuItem">
+          <a class="menuLink" href="./crew-commander.html">
+            <span class="number">02</span> Crew
+          </a>
+        </li>
+        <li class="menuItem">
+          <a class="menuLink" href="">
+            <span class="number">03</span> Technology
+          </a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <img class="openMenu" src="./assets/shared/icon-hamburger.svg" alt="" />
+        <img class="closeMenu" src="./assets/shared/icon-close.svg" alt="" />
+      </div>
+    </nav>
+    <main class="destination-container">
+      <div class="pick-destination">
+        <h1><span> 01 </span> Pick your destination</h1>
+        <img
+          class="destination-image"
+          src="./assets/destination/image-moon.png"
+          alt=""
+        />
+      </div>
+      <div class="destination-content">
+        <div class="destination-menu">
+          <a class="destination-link Mars" href="">Mars</a>
+          <a class="destination-link Moon" href="">Moon</a>
+          <a class="destination-link Europa" href="">Europa</a>
+          <a class="destination-link Titan" href="">Titan</a>
+        </div>
+
+        <h1 class="destination-name">Moon</h1>
+
+        <p class="destination-paragraph">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div class="line2"></div>
+        <div class="destination-data">
+          <div class="avg">
+            <h2>Avg. distance</h2>
+            <h3 class="destination-distance">384,400 km</h3>
+          </div>
+          <div class="time">
+            <h2>Est. travel time</h2>
+            <h3 class="destination-time">3 days</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./index.js"></script>
+</html>
