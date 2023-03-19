@@ -150,6 +150,10 @@ main {
   .line {
     display: none;
   }
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
   .logo img {
     margin-right: 230px;
   }
@@ -238,13 +242,18 @@ main {
   #paragraph {
     line-height: 1.5;
 
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    width: 350px;
+    word-wrap: break-word;
     padding-right: 0px;
+    padding-left: 20px;
     /* width: 200px; */
   }
   .explore {
-    padding: 50px 15px;
+    padding: 50px 25px;
     right: 100px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
   }
   .logo img {
     width: 40px;
@@ -260,22 +269,64 @@ main {
     backdrop-filter: blur(10px);
     width: 270px;
     height: 100%;
-    /* text-align: center; */
-    transition: 0.4s;
+    /*text-align: center;
+    */
+    transition: ease-in 0.4s;
     z-index: 1000;
     padding: 10px 40px;
-    /* box-shadow: 0 10px 27px rgba(249, 22, 22, 0.05); */
+    /*box-shadow: 0 10px 27px rgba(249, 22, 22, 0.05);
+    */
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    -moz-transition: ease-in 0.4s;
+    -ms-transition: ease-in 0.4s;
+    -o-transition: ease-in 0.4s;
+    -webkit-transition: ease-in 0.4s;
   }
+
   .navbar.active {
     left: 100px;
   }
   .menuItem {
     margin-top: 40px;
     font-size: 14px;
+    transition: ease-in 0.4s;
+
+    animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+  }
+  /* define the animation */
+
+  /**
+ * ----------------------------------------
+ * animation focus-in-expand
+ * ----------------------------------------
+ */
+  @-webkit-keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
 
   .openMenu {
@@ -327,6 +378,8 @@ main {
   font-family: "Bellefair", serif;
   color: #d0d6f9;
   line-height: 30px;
+
+  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .destination-menu {
   display: flex;
@@ -361,6 +414,9 @@ main {
   justify-content: flex-start;
   gap: 40px;
   align-items: center;
+  animation: focus-in-expand 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-expand 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
 }
 
 .line2 {
@@ -509,7 +565,7 @@ main {
   left: 20px;
 }
 .crew-image {
-  margin-top: 10px;
+  margin-top: -500px;
 
   margin-left: 500px;
 }
@@ -530,6 +586,9 @@ main {
   margin: 20px 0;
   font-size: 65px;
   font-family: "Barlow Condensed", sans-serif;
+  animation: focus-in-expand 4.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-expand 4.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
 }
 .crew-paragraph {
   margin: 30px 0;
@@ -539,6 +598,9 @@ main {
   color: #d0d6f9;
   width: 350px;
   word-wrap: break-word;
+  animation: focus-in-expand 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-expand 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
 }
 
 .meet-crew {
@@ -583,7 +645,7 @@ main {
     gap: 50px;
   }
   .crew-image {
-    margin-top: 250px;
+    margin-top: 0px;
 
     margin-left: 5px;
   }
@@ -600,11 +662,16 @@ main {
     letter-spacing: 1.2px;
     font-size: 20px;
     color: #a6a6a2;
+    margin-right: 25px;
   }
   .crew-name {
     letter-spacing: 1.2px;
-    margin: 5px 0;
+    margin: 5px 0px;
     font-size: 45px;
+    margin-right: 25px;
+  }
+  .crew-selector {
+    margin-right: 15px;
   }
   .meet-crew {
     letter-spacing: 1.42px;
@@ -671,4 +738,81 @@ main {
   .crew-role {
     font-size: 15px;
   }
+}
+
+/* technology */
+.technology-container {
+  background-image: url(./assets/technology/background-technology-desktop.jpg);
+}
+.technology-space {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+  letter-spacing: 4.5px;
+  left: 1%;
+  top: 0px;
+  position: absolute;
+}
+.number {
+  color: #4d4e4f;
+}
+.technology-content {
+  margin-top: 180px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  gap: 10px;
+}
+button {
+  padding: 18px 28px;
+  margin: 20px 0;
+  border: 0.5px solid #d0d6f9;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  color: white;
+  font-size: 25px;
+  font-family: "Bellefair", serif;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.technology-selector button {
+  display: block;
+}
+.technology-selector {
+  margin-top: -40px;
+}
+.terminology {
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  color: #d0d6f9;
+  font-size: 12px;
+}
+.technology-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  font-size: 45px;
+  font-family: "Barlow Condensed", sans-serif;
+  animation: focus-in-expand 4.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-expand 4.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+}
+.technology-paragraph {
+  margin: 20px 0;
+  text-align: flex-start;
+  line-height: 20px;
+  font-family: "Bellefair", serif;
+  color: #d0d6f9;
+  width: 350px;
+  word-wrap: break-word;
+  animation: focus-in-expand 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: focus-in-expand 3.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+}
+
+.technology-image {
+  margin-top: -150px;
+  margin-left: 40px;
 }

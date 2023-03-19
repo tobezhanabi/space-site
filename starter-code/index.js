@@ -22,23 +22,6 @@ function toggleMenu() {
     openMenu.style.display = "block";
   }
 }
-// active state
-// let links = document.querySelectorAll(".menuLink");
-// links.forEach((link) => {
-//   link.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     links.forEach((link) => link.classList.remove("active"));
-
-//     this.classList.add("active");
-//   });
-// });
-
-// // links.forEach((link) => {
-// //   const href = link.getAttribute("href");
-// //   if (window.location.href.includes(href)) {
-// //     link.classList.add("active");
-// //   }
-// // });
 
 // transfeing data
 fetch("data.json")
@@ -117,3 +100,21 @@ fetch("data.json")
     }
   })
   .catch((error) => console.log(error));
+
+fetch("data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const technologyName = document.querySelector(".technology-name");
+    const technologyParagraph = document.querySelector(".technology-paragraph");
+    const technologyImagePortrait = document.querySelector(
+      ".technology-image-portrait"
+    );
+    const technologyImageLandscape = document.querySelector(
+      ".technology-image-landscape"
+    );
+    const technologyLinks = document.querySelectorAll(".technology-link");
+
+    technologyLinks.forEach((link) => {
+      link.addEventListener("click");
+    });
+  });
