@@ -59,7 +59,7 @@
           <button class="technology-link Spaceport">2</button>
           <button class="technology-link Space">3</button>
         </div>
-        <div>
+        <div class="technology-text">
           <h2 class="terminology">The terminology...</h2>
           <h1 class="technology-name">Launch vehicle</h1>
 
@@ -82,14 +82,15 @@
 
             <!-- low resolution image for small screens -->
             <source
-              class="technology-image-portrait"
+              class="technology-image-landscape"
               srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
               media="(max-width:768px)"
             />
 
             <!-- fallback image if the browser doesn't support the picture element -->
             <img
-              src="./assets/technology/image-launch-vehicle-portrait.jpg"
+              class="technology-image-landscape"
+              src="./assets/technology/image-launch-vehicle-landscape.jpg"
               alt=""
             />
           </picture>

@@ -115,6 +115,26 @@ fetch("data.json")
     const technologyLinks = document.querySelectorAll(".technology-link");
 
     technologyLinks.forEach((link) => {
-      link.addEventListener("click");
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const technology = event.target.classList[1];
+        console.log(technology);
+        updateTechnology(technology);
+      });
     });
-  });
+
+    function updateTechnology(technology) {
+      const selectedTechnology = data.technology.find(
+        (t) => t.name2 === technology
+      );
+      if (!selectedTechnology) {
+        console.log(`${technology} is not found`);
+      } else {
+        technologyName.textContent = selectedTechnology.name;
+        technologyParagraph.textContent = selectedTechnology.description;
+        technologyImagePortrait.srcset = selectedTechnology.images.portrait;
+        technologyImageLandscape.srcset = selectedTechnology.images.landscape;
+      }
+    }
+  })
+  .catch((error) => console.log(error));

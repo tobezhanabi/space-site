@@ -762,7 +762,7 @@ main {
   grid-template-columns: 1fr 2fr 3fr;
   gap: 10px;
 }
-button {
+.technology-selector button {
   padding: 18px 28px;
   margin: 20px 0;
   border: 0.5px solid #d0d6f9;
@@ -815,4 +815,99 @@ button {
 .technology-image {
   margin-top: -150px;
   margin-left: 40px;
+}
+@media (max-width: 767px) {
+  .technology-container {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+  }
+  .technology-image {
+    margin-top: 50px;
+    margin-left: 0px;
+    width: auto;
+  }
+  .technology-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .technology-selector {
+    display: flex;
+    top: 60%;
+    left: 33%;
+    position: absolute;
+  }
+  .technology-selector button {
+    padding: 18px 25px;
+    margin-left: 25px;
+    font-size: 15px;
+  }
+  .technology-space {
+    font-size: 25px;
+    letter-spacing: 3.5px;
+    left: 100px;
+    top: 0px;
+  }
+  .technology-paragraph {
+    margin: 20px 0;
+
+    line-height: 20px;
+    margin-left: 200px;
+    width: 450px;
+    word-wrap: break-word;
+  }
+  .technology-text {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 375px) {
+  .technology-container {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+  }
+  .technology-image {
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 35px;
+  }
+  .technology-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .technology-selector {
+    display: flex;
+    top: 40%;
+    left: 20%;
+    position: absolute;
+  }
+  .technology-space {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    left: 20px;
+    top: 0px;
+  }
+  .number {
+    display: flex;
+  }
+  .technology-image-landscape {
+    width: 350px;
+  }
+  .technology-selector button {
+    padding: 8px 12px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-family: "Bellefair", serif;
+  }
+
+  .technology-text {
+    margin-top: 80px;
+  }
+  .technology-paragraph {
+    margin: 20px 0;
+
+    line-height: 20px;
+    margin-left: 20px;
+    width: 350px;
+    word-wrap: break-word;
+  }
 }
